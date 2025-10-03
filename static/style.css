@@ -1,12 +1,8 @@
 @media screen and (max-width: 800px) {
   ul, li, a{
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 100%;
   }
 }
-
-/*mobile-----------------------------------------*/
-
-/*pc-----------------------------------------*/
 
 /*light / dark-----------------------------------------*/
 .dark-mode {
@@ -28,7 +24,7 @@ body{
     margin: 0;
     padding: 0;
     background-color:aliceblue;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 
@@ -51,12 +47,37 @@ a{
     font-size: 20px;
 }
 
-div{
-    padding: 25px;
+.boxOuter{
+    justify-content: center;
+    display: flex;
+}
+
+.divbox {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);  
+}
+.box{
+    width: 250px;
+    padding: 10px;
+    margin: 0;
     float: left;
 }
 
-section{
-    padding: 20px;
-    
+/* MOBILE / PC*/
+/* MOBILE */
+@media (max-width: 768px) {
+    nav {
+        position: fixed bottom;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* PC */
+@media (min-width: 769px) {
+    nav {
+        position: sticky;
+        top: 0;
+    }
 }
